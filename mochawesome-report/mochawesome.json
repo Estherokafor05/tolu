@@ -1,0 +1,170 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 4,
+    "passes": 1,
+    "pending": 0,
+    "failures": 3,
+    "start": "2022-06-17T01:03:31.986Z",
+    "end": "2022-06-17T01:04:06.188Z",
+    "duration": 34202,
+    "testsRegistered": 4,
+    "passPercent": 25,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "386510d5-2ad9-4953-9a2c-cb1de970341d",
+      "title": "",
+      "fullFile": "cypress/e2e/assestsTest/loadAssest.cy.js",
+      "file": "cypress/e2e/assestsTest/loadAssest.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "5570eeed-8ca2-48e5-95e5-60c1bc882c71",
+          "title": "Assets page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify that user can access asset page",
+              "fullTitle": "Assets page should verify that user can access asset page",
+              "timedOut": null,
+              "duration": 14336,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "assets.getSpace(\"Your first space\");\nassets.getAssets();",
+              "err": {},
+              "uuid": "1e44dbc9-c86b-4a09-b977-528cdf1e4a21",
+              "parentUUID": "5570eeed-8ca2-48e5-95e5-60c1bc882c71",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should verify that user can upload assets",
+              "fullTitle": "Assets page should verify that user can upload assets",
+              "timedOut": null,
+              "duration": 9380,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "assets.getAssetPage(\"Your first space\");\ncy.fixture('IMG_8118.HEIC').as('photo');\ncy.get('.upload-select').attachFile('IMG_8118.HEIC');\nassets.uploadAssetbtn();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Confirm' within the element: [ <a.uk-form-file.uk-button.uk-button-primary>, 2 more... ] but never did.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find content: 'Confirm' within the element: [ <a.uk-form-file.uk-button.uk-button-primary>, 2 more... ] but never did.\n    at Assets.uploadAssetbtn (https://app.storyblok.com/__cypress/tests?p=cypress/e2e/assestsTest/loadAssest.cy.js:181:26)\n    at Context.eval (https://app.storyblok.com/__cypress/tests?p=cypress/e2e/assestsTest/loadAssest.cy.js:137:12)",
+                "diff": null
+              },
+              "uuid": "86d2bbec-d6e2-4565-b497-1009455439c1",
+              "parentUUID": "5570eeed-8ca2-48e5-95e5-60c1bc882c71",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should verify that user can select and replace replace asset",
+              "fullTitle": "Assets page should verify that user can select and replace replace asset",
+              "timedOut": null,
+              "duration": 7708,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "assets.getAssetPage(\"Your first space\");\nassets.selectRow();\ncy.fixture('IMG_8119.HEIC');\ncy.get('.upload-select').attachFile('IMG_8119.HEIC');\nassets.uploadAssetbtn();",
+              "err": {
+                "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.list__select`, but never found it.",
+                "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.list__select`, but never found it.\n    at Assets.selectRow (https://app.storyblok.com/__cypress/tests?p=cypress/e2e/assestsTest/loadAssest.cy.js:190:8)\n    at Context.eval (https://app.storyblok.com/__cypress/tests?p=cypress/e2e/assestsTest/loadAssest.cy.js:141:12)",
+                "diff": null
+              },
+              "uuid": "e9cd8c7d-b89b-4043-9a1e-8aa48e81c725",
+              "parentUUID": "5570eeed-8ca2-48e5-95e5-60c1bc882c71",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should be able to delete assets",
+              "fullTitle": "Assets page should be able to delete assets",
+              "timedOut": null,
+              "duration": 2345,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "assets.getAssetPage(\"Your first space\");\nassets.deleteAssets();",
+              "err": {
+                "message": "TypeError: assets.deleteAssets is not a function",
+                "estack": "TypeError: assets.deleteAssets is not a function\n    at Context.eval (https://app.storyblok.com/__cypress/tests?p=cypress/e2e/assestsTest/loadAssest.cy.js:148:12)",
+                "diff": null
+              },
+              "uuid": "9db9bb90-a3bf-49ec-81ef-7d62334465ac",
+              "parentUUID": "5570eeed-8ca2-48e5-95e5-60c1bc882c71",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "1e44dbc9-c86b-4a09-b977-528cdf1e4a21"
+          ],
+          "failures": [
+            "86d2bbec-d6e2-4565-b497-1009455439c1",
+            "e9cd8c7d-b89b-4043-9a1e-8aa48e81c725",
+            "9db9bb90-a3bf-49ec-81ef-7d62334465ac"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 33769,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
